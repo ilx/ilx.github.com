@@ -1,0 +1,41 @@
+h1. infrastructure monitoring
+
+Ideas:
+ - enable tomcat instances for EI (enterprise integration) 
+    - remove default logging, use logback
+    - enable transaction management (atomikos, bitronix, openejb?)
+    - enable jms support
+    - enable configuration management (ie create application instances and configure services from the outside - remotely)
+    - enable jmx and jolokia
+ - collect logs using logstash, push everything to elasticsearch (so one can search)
+ - collection metrics data using jolokia, push everything to opennms and statsd server, show graphs on graphite
+
+
+Resources:
+
+- logstash / elasticsearch 
+  - "Logstash and ElasticSearch":http://www.krisbuytaert.be/blog/logstash-and-elasticsearch
+- "List of statsd server implementations":http://joemiller.me/2011/09/21/list-of-statsd-server-implementations/
+
+
+h1. eclipse developer provisioning
+
+Resources:
+
+- "Discovering p2 API":http://www.slideshare.net/PascalRapicault/discovering-the-p2-api by Pascal Rapicault
+- "Understanding and extending p2 for fun and profit":http://www.slideshare.net/PascalRapicault/understanding-and-extending-p2-for-fun-and-profit
+- "Managin your runtime with p2":http://www.slideshare.net/PascalRapicault/managing-your-runtime-with-p2
+- "p2 introduction":http://www.slideshare.net/irbull/p2-introduction
+
+- "Building serverside eclipse based web applications":http://www.slideshare.net/eclipseguru/building-serverside-eclipse-based-web-applications
+
+Ideas:
+
+- Idea: crate vaadin based server side application that knows how to interpret p2 data, has ability to serve p2 data, acts as a proxy(?).
+Application could serve as a simple way to aggregate enterprise wide eclipse distributions.
+Should be able to push eclipse configurations from server to individual developers - should be project oriented (ie, associate eclipse instance configuration with inidividual project setup)
+
+
+
+
+
